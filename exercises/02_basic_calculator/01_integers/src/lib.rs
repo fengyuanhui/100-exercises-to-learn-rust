@@ -1,6 +1,7 @@
 fn compute(a: u32, b: u32) -> u32 {
-    // TODO: change the line below to fix the compiler error and make the tests pass.
-    let multiplier: u8 = 4;
+    // 显示指定变量为 u32 类型或者不显示指定，由编译器推导其类型
+    // let multiplier:u32 = 4;
+    let multiplier = 4;
     a + b * multiplier
 }
 
