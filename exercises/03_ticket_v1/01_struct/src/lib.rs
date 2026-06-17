@@ -27,3 +27,18 @@ mod tests {
         assert!(!order.is_available());
     }
 }
+
+struct Order {
+    price: u16,
+    quantity: u16,
+}
+
+impl Order {
+    fn is_available(&self) -> bool {
+        if self.quantity > 0 {
+            true
+        } else {
+            false
+        }
+    }
+}
