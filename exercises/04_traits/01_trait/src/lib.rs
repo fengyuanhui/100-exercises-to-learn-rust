@@ -3,9 +3,25 @@
 //
 // Then implement the trait for `u32` and `i32`.
 
+trait IsEvent {
+    fn is_even(&self) -> bool;
+}
+
+impl IsEvent for u32 {
+    fn is_even(&self) -> bool {
+        self % 2 == 0
+    }
+}
+
+impl IsEvent for i32 {
+    fn is_even(&self) -> bool {
+        self % 2 == 0
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use crate::IsEvent;
 
     #[test]
     fn test_u32_is_even() {
